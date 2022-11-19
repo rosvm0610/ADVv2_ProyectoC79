@@ -11,7 +11,7 @@ function getmenu(){
         for(var i=0;i<menu_list_array.length;i++){
             htmldata=htmldata+ menu_list_array[i] + '<br>'
         }
-        document.getElementById("").innerHTML = htmldata;
+        document.getElementById("display_menu").innerHTML = htmldata;
         //escribe un nombre de id apropiado como display_menu 
     }
 
@@ -19,6 +19,7 @@ function add_item(){
         var htmldata;
 		var imgtags='<img id="im1" src="pizzaImg.png">'
         var item=document.getElementById("add_item").value;
+	menu_list_array.sort();
         // utiliza la función sort como menu_list_array.sort();
         htmldata="";
         for(var i=0;i<menu_list_array.length;i++){
